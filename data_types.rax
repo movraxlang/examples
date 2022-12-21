@@ -3,6 +3,11 @@ some_number = 5 + 3
 addr = @0xffffff
 byte = xff
 byte1 = byte + x01
+some_value = true
+
+arr = [1, str, addr]
+
+map = {"key1": "value1", "key2": "value2"}
 
 // type returns the type of expression
 print(type(str))  		// String
@@ -10,3 +15,6 @@ print(type(some_number)) 	// Integer
 print(type(addr)) 		// Address
 print(type(byte))		// Byte
 print(type(byte1))		// Byte
+print(type(some_value))		// Boolean
+print(type(arr))		// Array
+print(type(map))		// Map

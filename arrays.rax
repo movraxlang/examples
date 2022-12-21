@@ -1,0 +1,20 @@
+str = "some string"
+num = 15
+addr = @0xdeadbeef
+
+// array is created with elements between []
+arr = [66, str, addr, num]
+
+print(arr) 	// [66, some string, 0xdeadbeef, 15]
+
+// to access the specific element, pass the index. indexes start at 0
+print(arr[2]) 	// prints 0xdeadbeef
+
+// because movrax does not change underlying values when assigning, we need to use change builtin
+// change(arr, index, value)
+change(arr, 1, "some new value")
+print(arr)	// [66, some new value, 0xdeadbeef, 15]
+
+// to append to the array, we use append builtin
+append(arr, xff)
+print(arr)	// [66, some new value, 0xdeadbeef, 15, xff]
