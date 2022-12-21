@@ -1,0 +1,12 @@
+str = "this is some string"
+some_number = 5 + 3
+addr = @0xffffff
+byte = xff
+byte1 = byte + x01
+
+// type returns the type of expression
+print(type(str))  		// String
+print(type(some_number)) 	// Integer
+print(type(addr)) 		// Address
+print(type(byte))		// Byte
+print(type(byte1))		// Byte

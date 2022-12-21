@@ -1,0 +1,5 @@
+str = "Hello World"
+print(str)
+
+str = str + " from rax!"
+print(str)
