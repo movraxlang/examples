@@ -1,0 +1,9 @@
+test = binary("./test")
+
+ctx test {
+	symbols = test.symbols
+	for i = 0; i < len(symbols); i += 1 {
+		sym = symbols[i]
+		print("name", sym.name, "address", sym.addr);
+	}	
+}
