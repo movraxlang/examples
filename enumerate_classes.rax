@@ -1,0 +1,30 @@
+if len(argv) != 2 {
+	print("error: missing binary and class name")
+	print("usage: /path/to/the/binary class_name")
+	exit(1)
+}
+
+bin_name = argv[0]
+class_name = argv[1]
+print("[*] Searching for", class_name, "\n")
+
+bin = binary(bin_name)
+
+classes = bin.classes
+
+for i = 0; i < len(classes); i++ {
+	if classes[i].name.contains(class_name) {
+		print("[*] class", classes[i], "contains", class_name, "superclass =", classes[i].super);
+		print("\t[*] class methods:")
+		cmethods = classes[i].cmethods;
+		for j = 0; j < len(cmethods); j++ {
+			print("\t\t+", cmethods[j]);
+		}
+		print("\tinstance methods:")
+		imethods = classes[i].imethods;
+		for j = 0; j < len(imethods); j++ {
+			print("\t\t-", imethods[j]);
+		}
+		print("=============================")
+	}
+}
