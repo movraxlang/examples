@@ -14,13 +14,13 @@ classes = bin.classes
 
 for i = 0; i < len(classes); i++ {
 	if classes[i].name.contains(class_name) {
-		print("[*] class", classes[i], "contains", class_name, "superclass =", classes[i].super);
+		print("[*] class", classes[i], "contains", class_name, "with superclass", classes[i].super);
 		print("\t[*] class methods:")
 		cmethods = classes[i].cmethods;
 		for j = 0; j < len(cmethods); j++ {
 			print("\t\t+", cmethods[j]);
 		}
-		print("\tinstance methods:")
+		print("\t[*] instance methods:")
 		imethods = classes[i].imethods;
 		for j = 0; j < len(imethods); j++ {
 			print("\t\t-", imethods[j]);
