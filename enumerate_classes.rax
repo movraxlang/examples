@@ -1,11 +1,11 @@
-if len(argv) != 2 {
+if len(argv) != 3 {
 	print("error: missing binary and class name")
 	print("usage: /path/to/the/binary class_name")
 	exit(1)
 }
 
-bin_name = argv[0]
-class_name = argv[1]
+bin_name = argv[1]
+class_name = argv[2]
 print("[*] Searching for", class_name, "\n")
 
 bin = binary(bin_name)

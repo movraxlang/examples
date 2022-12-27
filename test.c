@@ -1,3 +1,4 @@
+// clang -o test test.c
 #include <stdio.h>
 
 int test_func(void) {
