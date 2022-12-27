@@ -1,0 +1,21 @@
+if len(argv) != 1 {
+	print("error: missing binary path")
+	print("usage: /path/to/the/binary")
+	exit(1)
+}
+
+bin_name = argv[0]
+
+bin = binary(bin_name)
+
+method filter_symbols(sym) {
+	ret sym.name.contains("objc");
+}
+
+containing_objc = filter(bin.symbols, filter_symbols);
+
+print("[*] Symbols containing objc")
+
+for i = 0; i < len(containing_objc); i++ {
+	print("\t", containing_objc[i]);
+}
